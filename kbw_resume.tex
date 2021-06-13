@@ -1,0 +1,242 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://omnimilk.github.io/}{\Large Bowen Kuang}} & Email : \href{mailto:kuangbowen0928@163.com}{kuangbowen0928@163.com}\\
+  \href{https://omnimilk.github.io/}{https://omnimilk.github.io} & Mobile : +86-166-027-379-69 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {KTH Royal Institute of Technology}{Stockholm, Sweden}
+      {Master of Machine Learning;  GPA: Excellent}{Aug. 2016 -- Jun. 2018}
+    \resumeSubheading
+      {Wuhan University}{Wuhan, China}
+      {Bachelor of Internet of Things; GPA: 3.4}{Sep. 2012 -- Jun. 2016}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Huawei}{Hangzhou, China}
+      {Software Engineer}{Aug 2018 - Present}
+      \resumeItemListStart
+        \resumeItem{EAI Inference framework}
+          {EAI Inferce framework is a pure-C lightweight AI inference framework designed for embeded devices with emphasis on performance.
+           It contains various machine learning algorithms, scientific computing methods as well as a toolkit for model serialization and
+           deserialization. I designed and implemented the model serialization toolkit, various Boosting algorithms, interpolation methods
+           and scientific computing methods, achieved 5x+ performance enhancement than its scipy counterparts.}
+        \resumeItem{Mindspore}
+          {Mindspore is a deep learning framework features its source to source automatic differentiation. I worked for both its frontend and its
+          Ascend backend. The frontend is a compiler implemented in C++, it converts python source code into ANF IR and does lots of transformations on it.
+          I designed and implemented a tool which allows users to express IR transformations(passes) in python. As for Acscend backend, I deisgn and implemented
+          serveral kernels using TIK(TIK is a wrapper language for CCE-C and CCE-C(like CUDA-C) can be compiled into Ascend's ISA).}
+        \resumeItem{IC Simulator}
+          {IC Simulator is an IC design verification tool. Essentially it is a compiler for System Verilog(IEEE 1800) which can be used to describe
+          IC designs and testbenches. In this project, we use LLVM and MLIR as our compiler infrastrure. I worked as a feature owner for several features
+          whose job is to make the overall design proposal and to align APIs and progress from parser to runtime. I also worked as a developer for memory
+          allocator which supports tracing-based GC.}
+        \resumeItem{Static Timing Analysis tools}
+          {Static timing analysis(STA) is of essential importance through out the physical design stage of a chip. I developed a graph-based analysis tool using
+          Pregel. Pregel is a distributed graph processing framework whose scalability enables processing of gigantic design.}
+      \resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    % \resumeSubheading
+    %   {Coursera}{Mountain View, CA}
+    %   {Senior Software Engineer}{Jan 2014 - Oct 2016}
+    %   \resumeItemListStart
+    %     \resumeItem{Notifications}
+    %       {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
+    %     \resumeItem{Nostos}
+    %       {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
+    %     \resumeItem{Workflows}
+    %       {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
+    %     \resumeItem{Data Collection}
+    %       {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
+    %     \resumeItem{Dev Environment}
+    %       {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
+    %     \resumeItem{Data Warehousing}
+    %       {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
+    %     \resumeItem{Recommendations}
+    %       {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
+    %     \resumeItem{Content Discovery}
+    %       {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
+    %     \resumeItem{Course Dashboards}
+    %       {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
+    %   \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Lucena Research}{Atlanta, GA}
+    %   {Data Scientist}{Summer 2012 and 2013}
+    %   \resumeItemListStartgiganticso creating a strategy backtesting engine used for simulating and backtesting strategies.}
+    %     \resumeItem{QuantDesk}
+    %       {Python backend for a web application used by hedge fund managers for portfolio management.}
+    %   \resumeItemListEnd
+
+    \resumeSubheading
+      {KTH Royal Institute of Technology}{Stockholm, Sweden}
+      {Research Assistant}{Jan 2018 - Jun 2018}
+      \resumeItemListStart
+        \resumeItem{Research Assistant - Robotics and Autonomous SYstems}
+          {Our group assembled and coded a small autonomous vehicle equiped with multiple sensors and a robotic arm. The final product can drive autonomously in
+          a pre-designed maze and perform grasping tasks in case of target objects' presence. The main components of the software includes sensor fusion, mapping,
+          localization, and planning, and I was mainly responsible for the trajectory planning and the robotic arm's kinematic control.}
+        \resumeItem{Reserch Assistant - Enhance simulated data with GAN}
+          {Deep vision-based robotic grasping system takes a lot of high quality data to train, which is very costly. In this thesis project, a simulated environment
+          is built to collect simulated grasping sessions and an imaged-conditioned GAN is trained to adapt sessions collected in simulated domain to real world domain.
+          For simulated grasping sessions can be easily segmented, the author used this information to eliminate artifacts introduced by the simulated environment and
+          achieved visually realistic results.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%     \resumeSubItem{QuantSoftware Toolkit}
+%       {Open source python library for financial data analysis and machine learning for finance.}
+%     \resumeSubItem{Github Visualization}
+%       {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+%     \resumeSubItem{Recommendation System}
+%       {Music and Movie recommender systems using collaborative filtering on public datasets.}
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+%   \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C++, C, Python, Matlab, R}
+   }
+   \item{
+    \textbf{Technologies}{: LLVM, MLIR, Mindspore, TVM, Pybind11, Pregel, ROS}
+   }
+   \item{
+    \textbf{Tools}{: Git, VS Code, Markdown, Tex, Vim, Hexo}
+   }
+ \resumeSubHeadingListEnd
+
+ %
+%--------Language SKILLS------------
+\section{Language Skills}
+\resumeSubHeadingListStart
+  \item{
+    \textbf{Chinese}{: Native}
+  }
+  \item{
+   \textbf{English}{: Proficient}
+  }
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
